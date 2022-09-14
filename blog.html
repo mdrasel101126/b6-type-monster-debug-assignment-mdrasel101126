@@ -20,6 +20,12 @@
                 Block scopes are what you get when you use if statements, for statements, and the like. You can also use them stand-alone with a simple begin-end curly braces {}, not to be confused with empty object literals. Global scope — Global scope contains all of the things defined outside of all code blocks. A code block simply consists of grouped statements inside curly braces ({ }). if statement, loops, function are examples of structure that create a code block. A global variable has global scope. A global variable is accessible from anywhere in the code.
             </p>
         </div>
+        <div>
+            <h3>How JavaScript Event Loop Works?</h3>
+            <p>
+                JavaScript has a runtime model based on an event loop, which is responsible for executing the code, collecting and processing events, and executing queued sub-tasks. This model is quite different from models in other languages like C and Java. A queue is a data structure that works on the First in First out principle, so as tasks get pushed into the queue, they get out in that same order. Tasks that have been executed by the Web APIs, which are being pushed to the Task Queue, then go back to the Call Stack to get their result printed out.The event loop is a process that waits for the Call Stack to be clear before pushing callbacks from the Task Queue to the Call Stack. Once the Stack is clear, the event loop triggers and checks the Task Queue for available callbacks. If there are any, it pushes it to the Call Stack, waits for the Call Stack to be clear again, and repeats the same process.
+            </p>
+        </div>
     </section>
 </body>
 </html>
