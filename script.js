@@ -62,6 +62,7 @@ const validate = (key) => {
   if (key === questionText[userText.length - 1]) {
     return true;
   }
+  errorCount++;
   return false;
 };
 
@@ -71,7 +72,7 @@ const gameOver = () => {
   // the current time is the finish time
   // so total time taken is current time - start time
   const finishTime = new Date().getTime();
-  const timeTaken = (finishTime - startTime) / 1000;
+  const timeTaken = parseInt((finishTime - startTime) / 1000);
 
   // show result modal
   resultModal.innerHTML = "";
@@ -109,7 +110,6 @@ const start = () => {
 
   let count = 3;
   countdownOverlay.style.display = "flex";
-
   const startCountdown = setInterval(() => {
     countdownOverlay.innerHTML = `<h1>${count}</h1>`;
 
@@ -119,12 +119,14 @@ const start = () => {
       document.addEventListener("keydown", typeController);
       countdownOverlay.style.display = "none";
       display.classList.remove("inactive");
+      countdownOverlay.innerHTML = "";
 
       clearInterval(startCountdown);
       startTime = new Date().getTime();
     }
     count--;
   }, 1000);
+  count = 3;
 };
 
 // START Countdown
