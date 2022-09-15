@@ -190,6 +190,27 @@ button {
     flex-direction: column;
   }
 }
+@media only screen and (max-width:767px) {
+  #histories{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    gap: 10px;
+  }
+  .card{
+    display: block;
+  }
+}
+
+@media only screen and (min-width:768px) {
+  #histories{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 10px;
+  }
+  .card{
+    display: block;
+  }
+}
 @media only screen and (min-width:912px) {
   #histories{
     display: grid;
